@@ -12,7 +12,8 @@ function App() {
 				</Suspense>
 
 				<p>
-					Edit <code>src/App.js</code> and save to reload.
+					Change the speed settings to mid tier mobile in chrome dev tools to
+					see all the dog loading glory.
 				</p>
 				<a
 					className='App-link'
