@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import React, { Component } from 'react';
+import axios from 'axios';
+// import thedog from '../public/thedog';
 
 export default class Image extends Component {
 	constructor(props) {
@@ -9,16 +11,27 @@ export default class Image extends Component {
 			loaded: false,
 			dog: ''
 		};
+
+		this.fetchDog = this.fetchDog.bind(this);
+	}
+
+	fetchDog() {
+		axios.get('https://dog.ceo/api/breeds/image/random').then(res =>
+			this.setState({
+				dog: res.data.message
+			})
+		);
+	}
+
+	componentDidMount() {
+		// setTimeout(this.fetchDog, 500);
+		this.fetchDog();
 	}
 
 	render() {
 		return (
 			<div>
-				{console.log(this.state.dog)}
-				<img
-					width='400px'
-					src='http://www.hdnicewallpapers.com/Walls/Big/Dog/Beautiful_Dog_Puppy_4K_Wallpaper.jpg'
-				/>
+				<img width='400px' src={this.state.dog} />
 			</div>
 		);
 	}

@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import './App.css';
+// import axios from 'axios';
 
 const Image = React.lazy(() => import('./Image'));
 
