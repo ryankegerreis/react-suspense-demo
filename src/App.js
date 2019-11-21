@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import './App.css';
-// import axios from 'axios';
 
 const Image = React.lazy(() => import('./Image'));
 
@@ -18,10 +17,10 @@ function App() {
 				</p>
 				<a
 					className='App-link'
-					href='https://reactjs.org'
+					href='https://dog.ceo/dog-api/'
 					target='_blank'
 					rel='noopener noreferrer'>
-					Learn React
+					Need more dogs?
 				</a>
 			</header>
 		</div>

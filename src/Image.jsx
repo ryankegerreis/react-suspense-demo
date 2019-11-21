@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import React, { Component } from 'react';
 import axios from 'axios';
-// import thedog from '../public/thedog';
 
 export default class Image extends Component {
 	constructor(props) {
@@ -24,7 +22,6 @@ export default class Image extends Component {
 	}
 
 	componentDidMount() {
-		// setTimeout(this.fetchDog, 500);
 		this.fetchDog();
 	}
 
